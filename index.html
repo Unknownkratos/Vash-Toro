@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vash, Toro Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Vash, Toro Game</h1>
+        <div class="numbers">
+            <div class="player-number">
+                <label>Player 1</label>
+                <span id="playerNumber">****</span>
+            </div>
+            <div class="bot-number">
+                <label>Player 2</label>
+                <span id="botNumber">****</span>
+            </div>
+        </div>
+        <label class="label" for="guessInput">Enter your guess:</label>
+        <input type="text" id="guessInput" class="input">
+        <button id="submitGuess" class="button">Submit Guess</button>
+        <div id="feedback" class="feedback"></div>
+        <div id="suggestions" class="suggestions">
+            <h2>Suggestions:</h2>
+            <div class="player-suggestions" id="player1Suggestions"></div>
+            <div class="player-suggestions" id="player2Suggestions"></div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
