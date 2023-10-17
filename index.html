@@ -29,7 +29,16 @@
             <div class="player-suggestions" id="player2Suggestions"></div>
         </div>
     </div>
-    <script src="game.js"></script>
+
+    <script>
+        // Retrieve player data from local storage
+        var player1Name = localStorage.getItem("player1Name");
+        var player2Name = localStorage.getItem("player2Name");
+
+        // Update the player labels with the retrieved names
+        document.querySelector('.player-number label').textContent = player1Name;
+        document.querySelector('.bot-number label').textContent = player2Name;
+    </script>
 </body>
 
 </html>
