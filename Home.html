@@ -9,26 +9,47 @@
 <body>
     <div class="container">
         <h1>Enter Players Information</h1>
-        <form id="playerForm" action="index.html">
+        <form id="playerForm" action="secondpage.html"> <!-- Updated action attribute to "secondpage.html" -->
             <div class="form-group">
                 <label for="player1Name">Player-1 Name</label>
                 <input type="text" id="player1Name" required>
             </div>
-                <div class="form-group">
-                    <label for="player1Number">Player-1 Number (4 digits)</label>
-                    <input type="password" id="player1Number" required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 4)">
-                </div>
+            <div class="form-group">
+                <label for="player1Number">Player-1 Number (4 digits)</label>
+                <input type="text" id="player1Number" required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 4)">
+            </div>
             <div class="form-group">
                 <label for="player2Name">Player-2 Name</label>
                 <input type="text" id="player2Name" required>
             </div>
             <div class="form-group">
-                <label for="player1Number">Player-1 Number (4 digits)</label>
-                <input type="password" id="player1Number" required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 4)">
+                <label for="player2Number">Player-2 Number (4 digits)</label> <!-- Changed the label and input IDs to "player2Number" -->
+                <input type="text" id="player2Number" required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 4)">
             </div>
-            <button href="index.html" class="button">Submit</button>
+            <button type="submit" class="button">Submit</button> <!-- Updated the button element -->
         </form>
     </div>
+    <script>
+        // Store player data in local storage when the form is submitted
+        document.getElementById("playerForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // Prevent the form from submitting
+
+            // Get player names and numbers
+            var player1Name = document.getElementById("player1Name").value;
+            var player1Number = document.getElementById("player1Number").value;
+            var player2Name = document.getElementById("player2Name").value;
+            var player2Number = document.getElementById("player2Number").value;
+
+            // Store the data in local storage
+            localStorage.setItem("player1Name", player1Name);
+            localStorage.setItem("player1Number", player1Number);
+            localStorage.setItem("player2Name", player2Name);
+            localStorage.setItem("player2Number", player2Number);
+
+            // Redirect to the second page
+            window.location.href = "secondpage.html";
+        });
+    </script>
 </body>
 
 </html>
