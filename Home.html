@@ -14,25 +14,21 @@
                 <label for="player1Name">Player-1 Name</label>
                 <input type="text" id="player1Name" required>
             </div>
-            <div class="form-group">
-                <label for="player1Number">Player-1 Number (4 digits)</label>
-                <input type="password" id="player1Number" required maxlength="4" min="0" max="9999">
-            </div>
+                <div class="form-group">
+                    <label for="player1Number">Player-1 Number (4 digits)</label>
+                    <input type="password" id="player1Number" required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 4)">
+                </div>
             <div class="form-group">
                 <label for="player2Name">Player-2 Name</label>
                 <input type="text" id="player2Name" required>
             </div>
             <div class="form-group">
-                <label for="player2Number">Player 2 Secret Number (4 digits)</label>
-                <input type="password" id="player2Number" required maxlength="4" min="0" max="9999">
+                <label for="player1Number">Player-1 Number (4 digits)</label>
+                <input type="password" id="player1Number" required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 4)">
             </div>
-            <a href="index.html">
-                 <button class="button" type="submit">Start Game</button>
-
-            </a>
+            <button href="index.html" class="button">Submit</button>
         </form>
     </div>
-    <script src="input.js"></script>
 </body>
 
 </html>
