@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     }
- /*  
+
     console.log("Toro:");
     console.log(Toro);
     
     console.log("vash:");
     console.log(vash);
-   */
+  
   });
 });
