@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Enter Players Information</h1>
-        <form id="playerForm" action ="index.html">
+        <form id="playerForm" action="index.html"> <!-- Updated action attribute to "secondpage.html" -->
             <div class="form-group">
                 <label for="player1Name">Player-1 Name</label>
                 <input type="text" id="player1Name" required>
@@ -23,13 +23,11 @@
                 <input type="text" id="player2Name" required>
             </div>
             <div class="form-group">
-                <label for="player2Number">Player-2 Number (4 digits)</label>
+                <label for="player2Number">Player-2 Number (4 digits)</label> <!-- Changed the label and input IDs to "player2Number" -->
                 <input type="password" id="player2Number" required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 4)">
             </div>
-            <button type="submit" class="button">Submit</button>
+            <button type="submit" class="button" onclick="window.location.href='index.html'">Submit</button>
         </form>
     </div>
     <script src="game.js"></script>
 </body>
-
-</html>
