@@ -2,6 +2,7 @@
 var form = document.getElementById('playerForm');
 
 form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
 
   // Get the values from the input fields
   var player1Number = document.getElementById('player1Number').value;
@@ -26,9 +27,6 @@ form.addEventListener('submit', function(event) {
     }
   }
 
-  console.log("Toro:");
-  console.log(Toro);
-
-  console.log("vash:");
-  console.log(vash);
+  console.log("Toro:", Toro);
+  console.log("vash:", vash);
 });
